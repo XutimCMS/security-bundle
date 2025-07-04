@@ -29,13 +29,14 @@ final class XutimSecurityExtension extends Extension implements PrependExtension
 
         $loader = new PhpFileLoader($container, new FileLocator(__DIR__ . '/../../config'));
 
-        $loader->load('resolvers.php');
         $loader->load('repositories.php');
         $loader->load('factories.php');
         $loader->load('forms.php');
         $loader->load('actions.php');
-        $loader->load('routing.php');
+        $loader->load('console.php');
+        $loader->load('security.php');
         $loader->load('validators.php');
+        $loader->load('fixtures.php');
     }
 
     public function prepend(ContainerBuilder $container): void
